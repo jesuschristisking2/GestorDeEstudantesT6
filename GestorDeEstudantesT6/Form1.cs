@@ -22,12 +22,37 @@ namespace GestorDeEstudantesT6
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void labelAcessar_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void labelSenha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxSenha_TextChanged(object sender, EventArgs e)
         {
 
         }
