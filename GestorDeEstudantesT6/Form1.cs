@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace GestorDeEstudantesT6
 {
@@ -39,7 +40,11 @@ namespace GestorDeEstudantesT6
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            MeuBancoDeDados meuBancoDeDados = new MeuBancoDeDados();
 
+            MySqlDataAdapter meuAdaptadorSql = new MySqlDataAdapter();
+            DataTable minhaTabela = new DataTable();
+            MySqlCommand meuComandoSql = new MySqlCommand("", meuBancoDeDados.getConexao);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
