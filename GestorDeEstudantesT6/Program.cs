@@ -16,7 +16,17 @@ namespace GestorDeEstudantesT6
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.Run(new Login_Form());
+
+            Form1 login_Form = new Form1();
+            if (login_Form.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new FormMenuPrincipal());
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }
