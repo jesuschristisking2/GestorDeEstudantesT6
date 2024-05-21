@@ -18,12 +18,12 @@ namespace GestorDeEstudantesT6
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Login_Form());
 
-            Form1 login_Form = new Form1();
-            if (login_Form.ShowDialog() == DialogResult.OK)
+            Login_Form loginForm = new Login_Form();
+            if (loginForm.ShowDialog() == DialogResult.OK)
             {
                 Application.Run(new FormMenuPrincipal());
             }
-            else
+            else 
             {
                 Application.Exit();
             }

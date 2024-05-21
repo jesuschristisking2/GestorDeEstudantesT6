@@ -10,8 +10,9 @@ namespace GestorDeEstudantesT6
 {
     internal class MeuBancoDeDados
     {
-        private MySqlConnection conexao = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=sga_estudantes_bd_t6"); 
-
+        private MySqlConnection conexao =
+            new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=sga_estudantes_bd_t6");
+       
         public MySqlConnection getConexao
         {
             get
@@ -22,7 +23,7 @@ namespace GestorDeEstudantesT6
 
         public void abrirConexao()
         {
-            if(conexao.State == ConnectionState.Closed)
+            if (conexao.State == ConnectionState.Closed)
             {
                 conexao.Open();
             }
@@ -30,11 +31,10 @@ namespace GestorDeEstudantesT6
 
         public void fecharConexao()
         {
-            if (conexao.State == ConnectionState.Closed)
+            if (conexao.State == ConnectionState.Open)
             {
                 conexao.Close();
             }
         }
     }
-
 }
