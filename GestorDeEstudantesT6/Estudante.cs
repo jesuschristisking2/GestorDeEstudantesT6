@@ -15,7 +15,7 @@ namespace GestorDeEstudantesT6
         public bool inserirEstudante(string nome, string sobrenome, DateTime nascimento, string telefone, string genero, string endereco, MemoryStream foto)
 
         {
-            MySqlCommand comando = new MySqlCommand("", meuBancoDeDados.getConexao);
+            MySqlCommand comando = new MySqlCommand("", meuBancoDeDados.getConexao); 
             return true;
         }
     }
