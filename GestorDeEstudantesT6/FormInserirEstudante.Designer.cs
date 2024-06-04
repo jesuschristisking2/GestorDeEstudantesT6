@@ -41,14 +41,14 @@
             this.radioButtonFeminino = new System.Windows.Forms.RadioButton();
             this.textBoxTelefone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxEndereço = new System.Windows.Forms.TextBox();
+            this.textBoxEndereco = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonLogin = new System.Windows.Forms.Button();
+            this.pictureBoxFoto = new System.Windows.Forms.PictureBox();
+            this.buttonEnviarFoto = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonCadastrar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxNome
@@ -162,13 +162,13 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Telefone";
             // 
-            // textBoxEndereço
+            // textBoxEndereco
             // 
-            this.textBoxEndereço.Location = new System.Drawing.Point(122, 229);
-            this.textBoxEndereço.Multiline = true;
-            this.textBoxEndereço.Name = "textBoxEndereço";
-            this.textBoxEndereço.Size = new System.Drawing.Size(163, 56);
-            this.textBoxEndereço.TabIndex = 16;
+            this.textBoxEndereco.Location = new System.Drawing.Point(122, 229);
+            this.textBoxEndereco.Multiline = true;
+            this.textBoxEndereco.Name = "textBoxEndereco";
+            this.textBoxEndereco.Size = new System.Drawing.Size(163, 56);
+            this.textBoxEndereco.TabIndex = 16;
             // 
             // label6
             // 
@@ -178,27 +178,28 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 20);
             this.label6.TabIndex = 15;
-            this.label6.Text = "Endereço";
+            this.label6.Text = "Endereco";
             // 
-            // pictureBox1
+            // pictureBoxFoto
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(87, 306);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 139);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxFoto.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFoto.Image")));
+            this.pictureBoxFoto.Location = new System.Drawing.Point(87, 306);
+            this.pictureBoxFoto.Name = "pictureBoxFoto";
+            this.pictureBoxFoto.Size = new System.Drawing.Size(138, 139);
+            this.pictureBoxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFoto.TabIndex = 17;
+            this.pictureBoxFoto.TabStop = false;
             // 
-            // buttonLogin
+            // buttonEnviarFoto
             // 
-            this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(87, 451);
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(138, 51);
-            this.buttonLogin.TabIndex = 18;
-            this.buttonLogin.Text = "Enviar Foto";
-            this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonEnviarFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEnviarFoto.Location = new System.Drawing.Point(87, 451);
+            this.buttonEnviarFoto.Name = "buttonEnviarFoto";
+            this.buttonEnviarFoto.Size = new System.Drawing.Size(138, 51);
+            this.buttonEnviarFoto.TabIndex = 18;
+            this.buttonEnviarFoto.Text = "Enviar Foto";
+            this.buttonEnviarFoto.UseVisualStyleBackColor = true;
+            this.buttonEnviarFoto.Click += new System.EventHandler(this.buttonEnviarFoto_Click);
             // 
             // buttonCancelar
             // 
@@ -209,6 +210,7 @@
             this.buttonCancelar.TabIndex = 19;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonCadastrar
             // 
@@ -219,6 +221,7 @@
             this.buttonCadastrar.TabIndex = 20;
             this.buttonCadastrar.Text = "Cadastrar";
             this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
             // FormInserirEstudante
             // 
@@ -227,9 +230,9 @@
             this.ClientSize = new System.Drawing.Size(311, 591);
             this.Controls.Add(this.buttonCadastrar);
             this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.buttonLogin);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBoxEndereço);
+            this.Controls.Add(this.buttonEnviarFoto);
+            this.Controls.Add(this.pictureBoxFoto);
+            this.Controls.Add(this.textBoxEndereco);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxTelefone);
             this.Controls.Add(this.label5);
@@ -245,7 +248,7 @@
             this.Text = "FormInserirEstudante";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,10 +268,10 @@
         private System.Windows.Forms.RadioButton radioButtonFeminino;
         private System.Windows.Forms.TextBox textBoxTelefone;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxEndereço;
+        private System.Windows.Forms.TextBox textBoxEndereco;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.PictureBox pictureBoxFoto;
+        private System.Windows.Forms.Button buttonEnviarFoto;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonCadastrar;
     }
