@@ -12,7 +12,7 @@ namespace GestorDeEstudantesT6
     {
         MeuBancoDeDados meuBancoDeDados = new MeuBancoDeDados();
 
-        public bool inserirEstudante(string nome, string sobrenome, DateTime nascimento, string telefone, string genero, string endereco, MemoryStream foto)
+        public bool InserirEstudante(string nome, string sobrenome, DateTime nascimento, string telefone, string genero, string endereco, MemoryStream foto)
 
         {
             MySqlCommand comando = new MySqlCommand("INSERT INTO `estudantes`(`nome`, `sobrenome`, `nascimento`, `genero`, `telefone`, `endereco`, `foto`) VALUES (@nome,@sobrenome,@nascimento,@genero,@telefone,@endereco,@foto)", meuBancoDeDados.getConexao);
@@ -23,11 +23,19 @@ namespace GestorDeEstudantesT6
             comando.Parameters.Add("@genero", MySqlDbType.VarChar).Value = genero;
             comando.Parameters.Add("@telefone", MySqlDbType.VarChar).Value = telefone;
             comando.Parameters.Add("@endereco", MySqlDbType.Text).Value = endereco;
-            comando.Parameters.Add("@foto", MySqlDbType.LongBlob).Value = foto.ToArray;
+            comando.Parameters.Add("@foto", MySqlDbType.LongBlob).Value = foto.ToArray();
 
-            if 
-            
-            return true;
+            if (comando.ExecuteNonQuery() == 1)
+            {
+                meuBancoDeDados.fecharConexao();
+                return true;
+            }
+            else
+            {
+                meuBancoDeDados.fecharConexao();
+                return false;
+            }
+
         }
     }
 }
