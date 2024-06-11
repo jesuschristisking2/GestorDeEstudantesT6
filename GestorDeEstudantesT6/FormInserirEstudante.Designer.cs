@@ -169,6 +169,7 @@
             this.textBoxEndereco.Name = "textBoxEndereco";
             this.textBoxEndereco.Size = new System.Drawing.Size(163, 56);
             this.textBoxEndereco.TabIndex = 16;
+            this.textBoxEndereco.TextChanged += new System.EventHandler(this.textBoxEndereco_TextChanged);
             // 
             // label6
             // 

@@ -25,7 +25,7 @@ namespace GestorDeEstudantesT6
 
         private void buttonEnviarFoto_Click(object sender, EventArgs e)
         {
-            //Exibe uma janela para procurar a imagem.
+            // Exibe uma janela para procurar a imagem.
             OpenFileDialog selecionarImagem = new OpenFileDialog();
 
             selecionarImagem.Filter = "Selecione a foto (*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
@@ -82,7 +82,7 @@ namespace GestorDeEstudantesT6
             int anoDeNascimento = dateTimePickerNascimento.Value.Year;
             int anoAtual = DateTime.Now.Year;
 
-            if (((anoAtual - anoDeNascimento) < 10 ) ||
+            if (((anoAtual - anoDeNascimento) < 10) ||
                 (((anoAtual - anoDeNascimento) > 100)))
             {
                 MessageBox.Show("Precisa ter entre 10 e 100 anos.", "Idade Inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -90,12 +90,26 @@ namespace GestorDeEstudantesT6
             else if (Verificar())
             {
                 pictureBoxFoto.Image.Save(foto, pictureBoxFoto.Image.RawFormat);
-            }
 
-            if (estudante.InserirEstudante(nome, sobrenome, nascimento, telefone, genero, endereco, foto))
-            {
-                MessageBox.Show("Novo aluno cadastrado!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                if (estudante.InserirEstudante(nome, sobrenome, nascimento, telefone, genero, endereco, foto))
+                {
+                    MessageBox.Show("Novo aluno cadastrado!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Aluno não cadastrado!", "Falha!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
             }
+            else
+            {
+                MessageBox.Show("Campos não preenchidos!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void textBoxEndereco_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
