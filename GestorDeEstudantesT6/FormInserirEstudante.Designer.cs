@@ -57,7 +57,6 @@
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(163, 20);
             this.textBoxNome.TabIndex = 6;
-            this.textBoxNome.TextChanged += new System.EventHandler(this.textBoxUsuario_TextChanged);
             // 
             // label2
             // 
@@ -90,7 +89,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 79);
+            this.label3.Location = new System.Drawing.Point(13, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 20);
             this.label3.TabIndex = 9;
@@ -98,9 +97,10 @@
             // 
             // dateTimePickerNascimento
             // 
-            this.dateTimePickerNascimento.Location = new System.Drawing.Point(122, 78);
+            this.dateTimePickerNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerNascimento.Location = new System.Drawing.Point(122, 83);
             this.dateTimePickerNascimento.Name = "dateTimePickerNascimento";
-            this.dateTimePickerNascimento.Size = new System.Drawing.Size(163, 20);
+            this.dateTimePickerNascimento.Size = new System.Drawing.Size(95, 20);
             this.dateTimePickerNascimento.TabIndex = 10;
             // 
             // label4
@@ -169,7 +169,6 @@
             this.textBoxEndereco.Name = "textBoxEndereco";
             this.textBoxEndereco.Size = new System.Drawing.Size(163, 56);
             this.textBoxEndereco.TabIndex = 16;
-            this.textBoxEndereco.TextChanged += new System.EventHandler(this.textBoxEndereco_TextChanged);
             // 
             // label6
             // 
@@ -179,7 +178,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 20);
             this.label6.TabIndex = 15;
-            this.label6.Text = "Endereco";
+            this.label6.Text = "Endereço";
             // 
             // pictureBoxFoto
             // 
@@ -246,7 +245,8 @@
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.label2);
             this.Name = "FormInserirEstudante";
-            this.Text = "FormInserirEstudante";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SGA - Novo Cadastro";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();
