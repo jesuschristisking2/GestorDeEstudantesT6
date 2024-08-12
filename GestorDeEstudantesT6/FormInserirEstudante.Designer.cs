@@ -89,7 +89,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 83);
+            this.label3.Location = new System.Drawing.Point(13, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 20);
             this.label3.TabIndex = 9;
@@ -98,7 +98,7 @@
             // dateTimePickerNascimento
             // 
             this.dateTimePickerNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNascimento.Location = new System.Drawing.Point(122, 83);
+            this.dateTimePickerNascimento.Location = new System.Drawing.Point(122, 78);
             this.dateTimePickerNascimento.Name = "dateTimePickerNascimento";
             this.dateTimePickerNascimento.Size = new System.Drawing.Size(95, 20);
             this.dateTimePickerNascimento.TabIndex = 10;
@@ -247,6 +247,7 @@
             this.Name = "FormInserirEstudante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SGA - Novo Cadastro";
+            this.Load += new System.EventHandler(this.FormInserirEstudante_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();

@@ -230,7 +230,7 @@
             // 
             this.textBoxId.Location = new System.Drawing.Point(124, 12);
             this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(80, 20);
+            this.textBoxId.Size = new System.Drawing.Size(79, 20);
             this.textBoxId.TabIndex = 38;
             // 
             // label7
@@ -245,13 +245,12 @@
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(212, 10);
+            this.buttonBuscar.Location = new System.Drawing.Point(209, 10);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
             this.buttonBuscar.TabIndex = 39;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
-            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // FormAtualizarApagarAlunos
             // 
@@ -292,23 +291,23 @@
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonApagar;
         private System.Windows.Forms.Button buttonEnviarFoto;
-        private System.Windows.Forms.PictureBox pictureBoxFoto;
-        private System.Windows.Forms.TextBox textBoxEndereco;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxTelefone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButtonMasculino;
-        private System.Windows.Forms.RadioButton radioButtonFeminino;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNascimento;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxSobrenome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxId;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonBuscar;
+        internal System.Windows.Forms.PictureBox pictureBoxFoto;
+        internal System.Windows.Forms.TextBox textBoxEndereco;
+        internal System.Windows.Forms.TextBox textBoxTelefone;
+        internal System.Windows.Forms.RadioButton radioButtonMasculino;
+        internal System.Windows.Forms.RadioButton radioButtonFeminino;
+        internal System.Windows.Forms.DateTimePicker dateTimePickerNascimento;
+        internal System.Windows.Forms.TextBox textBoxSobrenome;
+        internal System.Windows.Forms.TextBox textBoxNome;
+        internal System.Windows.Forms.TextBox textBoxId;
     }
 }
